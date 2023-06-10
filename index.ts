@@ -1,17 +1,17 @@
-const filterBySearch = (value) => {
+const filterBySearch = (value: string) => {
   console.log(value);
 };
 
-const debounce = (fn, delay) => {
-  let timeoutId;
+const debounce = (fn: (value: string) => void, delay: number) => {
+  let timeoutId: number | undefined;
 
-  return (e) => {
+  return (e: Event) => {
     if (timeoutId) {
       clearTimeout(timeoutId);
     }
 
     timeoutId = setTimeout(() => {
-      fn(e.target.value);
+      fn((e.target as HTMLInputElement).value);
     }, delay);
   };
 };
