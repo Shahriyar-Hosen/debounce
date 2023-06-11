@@ -1,5 +1,7 @@
 <h1 align="center">Search with Debounce</h1>
 
+### Functionality
+
 ```ts
 const filterBySearch = (value: string) => {
   console.log(value);
@@ -19,6 +21,8 @@ const debounce = (fn: (value: string) => void, delay: number) => {
   };
 };
 ```
+
+### Input Section
 
 ```tsx
 <input
