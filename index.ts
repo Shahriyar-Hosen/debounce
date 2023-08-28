@@ -3,7 +3,7 @@ const filterBySearch = (value: string) => {
 };
 
 const debounce = (fn: (value: string) => void, delay: number) => {
-  let timeoutId: number | undefined;
+  let timeoutId: NodeJS.Timeout | number | undefined;
 
   return (e: Event) => {
     if (timeoutId) {
