@@ -5,7 +5,7 @@ const filterBySearch = (value: string) => {
 const debounce = (fn: (value: string) => void, delay: number) => {
   let timeoutId: NodeJS.Timeout | number | undefined;
 
-  return (e: Event) => {
+  return (e: FormEvent) => {
     if (timeoutId) {
       clearTimeout(timeoutId);
     }
